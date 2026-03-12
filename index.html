@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 15 at itskillcenter</title>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <form>
+    <!-- startup -->
+    <h1>Student Admission Form</h1>
+    <p>Please fill out the form below to register for the upcoming cohort.</p>
+    <!-- students primary details -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="full-name">Full Name</label>
+        <input
+          type="text"
+          id="full-name"
+          name="student_name"
+          placeholder="e.g ayepegba orunyabo"
+          required
+        />
+        <label for="Email-Address">Email Address</label>
+        <input
+          type="email"
+          id="Email-Address"
+          name="email"
+          placeholder="jack@example.com"
+          required
+        />
+        <label for="user-pass">Password</label>
+        <input type="password" id="user-pass" name="password" required />
+        <label for="phone-number">Phone Number</label>
+        <input 
+          type="tel"
+          id="phone-number"
+          name="phone_number"
+          placeholder="e.g 123-456-7890"
+          required
+        />
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="date" id="date-of-birth" name="date_of_birth" required />
+      </fieldset>
+      <!-- academic preferences-->
+      <fieldset>
+        <legend>Academic Preferences</legend>
+        <div class="option-group">
+          <div class="option-label">Gender</div>
+          <div class="option-grid">
+            <label class="option-row" for="male">
+              <input class="jjc" type="radio" id="male" name="gender" value="male" />
+              Male
+            </label>
+            <label class="option-row" for="female">
+              <input class="jjc" type="radio" id="female" name="gender" value="female" />
+              Female
+            </label>
+            <label class="option-row" for="other">
+              <input class="jjc" type="radio" id="other" name="gender" value="other" />
+              Other
+            </label>
+          </div>
+        </div>
+
+        <label for="desired-course">Desired Course</label>
+        <select id="desired-course" name="desired_course" required>
+          <option value="">-- Please choose a Course --</option>
+          <option value="data-science">Data Science</option>
+          <option value="mobile-development">Mobile Development</option>
+          <option value="web-development">Web Development</option>
+        </select>
+
+        <div class="option-group">
+          <div class="option-label">Campus Facilities Needed</div>
+          <div class="option-grid">
+            <label class="option-row" for="hostel-accommodation">
+              <input
+                type="checkbox"
+                id="hostel-accommodation"
+                name="facility"
+                value="Hostel Accommodation"
+              />
+              Hostel Accommodation
+            </label>
+            <label class="option-row" for="library-access">
+              <input
+                type="checkbox"
+                id="library-access"
+                name="facility"
+                value="24/7 Library Access"
+              />
+              24/7 Library Access
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional Details</legend>
+        <label for="statement">Why do you want to join this campus?</label>
+        <textarea
+          id="statement"
+          name="personal_statement"
+          placeholder="stay away from distractions......."
+        ></textarea>
+      </fieldset>
+      <button class="julian" type="submit" >Submit Application</button>
+    </form>
+  </body>
+</html>
